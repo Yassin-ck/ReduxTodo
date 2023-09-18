@@ -28,7 +28,7 @@ const ListItem = () => {
     const reversedTasks = addedTasks.slice().reverse();
     return (
     <div>
-    {reversedTasks.map((item)=>(
+        {reversedTasks.map((item)=>(
         <div className='listMainContainer'>
         {idEdit === item.id ? 
         <div key={item.id} className='list_Input_edit' style={{margin:'20px'}}>

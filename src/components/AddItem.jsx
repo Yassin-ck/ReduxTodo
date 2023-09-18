@@ -13,7 +13,6 @@ const AddItem = () => {
         e.preventDefault()
         let task =inputRef.current.value
         if (task.trim().length !== 0){
-
             let id = Math.floor(Math.random()*100000);
             dispatch(addTask({task,id}))
             inputRef.current.value=''
@@ -21,14 +20,14 @@ const AddItem = () => {
     }
   return (
     <div className='parentContainer'>
-    <div  className='AddMainContainer'>
-    <h2 style={{textAlign:'center'}}>TODO</h2>
-    <form onSubmit={taskHandler}>
-    <input type='text' name='addtask' autoFocus placeholder='Add your tasks here' ref={inputRef} />
-    <input type='submit' />
-    </form>
-    <ListItem />
-    </div>
+        <div  className='AddMainContainer'>
+            <h2 style={{textAlign:'center'}}>TODO</h2>
+                <form onSubmit={taskHandler}>
+                    <input type='text' name='addtask' autoFocus placeholder='Add your tasks here' ref={inputRef} />
+                    <input type='submit' />
+                </form>
+            <ListItem />
+        </div>
     </div>
   )
 }

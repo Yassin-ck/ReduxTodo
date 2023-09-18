@@ -10,7 +10,6 @@ const todoSlice = createSlice({
     reducers:{
         addTask:(state,action)=>{
             state.todoList.push(action.payload)   
-            console.log(action.payload);         
             
         },
         removeTask:(state,action)=>{
@@ -23,7 +22,6 @@ const todoSlice = createSlice({
             state.todoList = state.todoList.map(item=>
                 item.id === action.payload.id ?updatedItem : item
             )
-            console.log(state.todoList,'===state');
         }
     }
 
